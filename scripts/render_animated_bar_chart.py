@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Animated bar chart renderer for archviz-diagram + archviz-animation crossover.
+Animated bar chart renderer for archviz-diagram + archviz-anime crossover.
 Generates growing bar chart animation as GIF.
 """
 import argparse
@@ -11,7 +11,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
-# Theme from archviz-animation
+# Theme from archviz-anime
 THEME = {
     "bg": "#000000",
     "white": "#f4f0ee",
