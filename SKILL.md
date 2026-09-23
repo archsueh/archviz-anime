@@ -1,5 +1,5 @@
 ---
-name: archviz-animed
+name: archviz-anime
 description: |
   技术架构动态图全流程：内容分析 → JSON spec 构建 → Python 渲染 → 三交付物（.excalidraw 可编辑源 + PNG 静态图 + GIF 动画）。
   黑底手绘风格，glow 流光 + pulse 模块动效，无需 image API，纯代码生成，结果完全确定可复现。
@@ -274,7 +274,7 @@ python3 scripts/render_math_visualization.py \
 
 **风格特点：**
 - 暗黑背景 + 发光场强表面
-- Viridis 色系渐变（暗蓝→青绿→黄）
+- **冷绿橄榄主调 + 金色峰值** —— 注意：**不是** Viridis。实测 Viridis 与参考视频匹配度 0%，正确调色表见 `references/yang-mills-analysis.md`
 - 内部规范方向颜色映射
 - 移动 Wilson 回路
 - GPU 着色器实时计算曲率 F = dA + A∧A
@@ -311,3 +311,15 @@ PYTHONPATH="" /usr/bin/python3 scripts/render_yang_mills.py \
 - `title.highlight`：1-3 词
 - 每张 card 的 `body`：≤2 行，每行 ≤22 字符（渲染器会自动缩小字体作为安全网，但超限会影响美观）
 - CJK 字符支持，自动换行
+
+---
+
+## [9] 参考文档
+
+| 文档 | 内容 |
+|---|---|
+| `references/spec-format.md` | JSON spec 完整字段规范 |
+| `references/yang-mills-analysis.md` | 杨-米尔斯参考视频的像素级分析：正确 shader 调色表（R/G 比值分带）+ v1→v4 失败记录 |
+| `references/video-reference-replication.md` | 无 vision API 时复刻参考视频风格的分析流程：ffprobe 元数据 → ffmpeg 抽帧 → 亮度分带 → R/G 比值判色 → 通道主导性 → 径向剖面 |
+
+> 复刻参考视觉时**先出数据报告再写 shader**，不要凭文字描述猜配色——实测「发光的金色表面」实际是冷绿橄榄，文字描述会骗人。
