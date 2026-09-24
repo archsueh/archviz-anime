@@ -17,6 +17,8 @@ metadata:
 
 黑底手绘风格技术架构动态图，三交付物全流程。依赖：`pip install Pillow>=10.0.0`
 
+> **视觉规范**：黑底手绘风格 token 见 **archviz-skills 共享设计系统**（`archviz-diagram` 的 `DESIGN.md`）；深色工程语境对齐第四套视觉语言 **Technical Blueprint**（`#0d1b2a` / `#5fd0e8`）。
+
 ---
 
 ## 架构
