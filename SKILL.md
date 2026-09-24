@@ -1,5 +1,5 @@
 ---
-name: archviz-anime
+name: archviz-animated
 description: |
   技术架构动态图全流程：内容分析 → JSON spec 构建 → Python 渲染 → 三交付物（.excalidraw 可编辑源 + PNG 静态图 + GIF 动画）。
   黑底手绘风格，glow 流光 + pulse 模块动效，无需 image API，纯代码生成，结果完全确定可复现。
@@ -7,7 +7,7 @@ description: |
 license: MIT
 metadata:
   version: 0.1.0
-  source: https://github.com/archsueh/archviz-anime
+  source: https://github.com/archsueh/archviz-animated
   risk: safe
   author: archsueh
   triggers: 动态架构图, animated diagram, 架构动画, excalidraw, 技术图动效, gif 架构图, architecture, diagram, animated, gif, python, hand-drawn
@@ -127,7 +127,7 @@ metadata:
 pip install "Pillow>=10.0.0"
 
 # 渲染
-python3 ~/.agents/skills/archviz-animed/scripts/render_animated_diagram.py \
+python3 ~/Developer/archviz-animated/scripts/render_animated_diagram.py \
   --spec spec.json \
   --outdir ./output \
   --basename archer-router \
@@ -164,7 +164,7 @@ python3 ~/.agents/skills/archviz-animed/scripts/render_animated_diagram.py \
 
 ## [6] 柱状图动画 (Bar Chart Animation)
 
-交叉优化：archviz-diagram + archviz-anime
+交叉优化：archviz-diagram + archviz-animated
 
 **功能：** 将柱状图数据转换为生长动画 GIF
 
